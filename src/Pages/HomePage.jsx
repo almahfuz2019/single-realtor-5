@@ -15,13 +15,13 @@ export default function HomePage() {
     <div className="overflow-hidden">
       <HeroSection />
       <Services />
-      <Neighborhood />
+      {/* <Neighborhood /> */}
       <Featured />
       <About />
       <WorkProcess />
+      <Contact/>
       <Testimonial />
       <Insights/>
-      <Contact/>
     </div>
   );
 }

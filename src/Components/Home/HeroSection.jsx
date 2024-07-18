@@ -1,103 +1,56 @@
-import Image from "next/image";
+"use client";
 import React from "react";
+import Image from "next/image";
+import { FaFacebook, FaTwitter, FaInstagram } from "react-icons/fa";
 
-export default function HeroSection() {
+const HeroSection = () => {
   return (
-    <div
-      id="home"
-      className="relative py-12 md:py-24 bg-primary 2xl:h-screen overflow-hidden"
-    >
-      {/* Main container */}
-      <section className="max-w-screen-xl mx-auto container px-4 sm:px-8 md:px-16">
-        <div className="flex flex-col lg:flex-row items-center justify-center gap-8 md:gap-12">
-          {/* Hero image */}
-          <Image
-            src="https://i.ibb.co/Jkv54Ph/Rectangle-3900.png"
-            height={719}
-            width={602}
-            alt="Hero Image"
-            className="w-full lg:w-auto xl:h-[65vh]"
-          />
-          {/* Hero text content */}
-          <div className="text-center lg:text-left">
-            <h1 className="text-[#88A9C3] font-bold text-3xl md:text-5xl leading-8 md:leading-[50px] text-center font-merriweather">
-              Live the dream, Start your <br /> next chapter
-            </h1>
-            <p className="text-[#88A9C3CC] font-normal text-base md:text-xl mt-4 md:mt-8 font-raleway text-center">
-              Begin your journey of home, transform your story into a successful
-              chapter with our expert real estate guidance.
-            </p>
-            {/* Buttons */}
-            <div className="mt-6 md:mt-10 flex flex-col sm:flex-row gap-3 md:gap-6 justify-center w-full font-roboto">
-              <a
-                href="#services"
-                className="bg-neutral px-4 md:px-5 py-2 md:py-2.5  rounded-lg text-primary font-medium text-base md:text-xl font-roboto transition-all duration-300 ease-in-out hover:bg-[#2B4257] hover:text-neutral hover:shadow-lg hover:-translate-y-1"
-              >
-                Explore Condos
-              </a>
-              <a
-                href="#contact"
-                className="flex items-center justify-center gap-2 lg:gap-3 sm:w-auto rounded-md lg:rounded-lg border  text-white shadow focus:outline-none focus:ring  px-4 md:px-5 py-2 md:py-2.5    font-medium text-base md:text-xl font-roboto transition-all duration-300 ease-in-out hover:bg-[#2B4257] hover:text-neutral hover:shadow-lg hover:-translate-y-1"
-              >
-                <Image
-                  src="https://i.ibb.co/DQJ8MYP/Mask-group-11.png"
-                  height={20}
-                  width={20}
-                  alt="Call Icon"
-                  className="h-4 w-4 md:h-5 md:w-auto "
-                />
-                Book A Call
-              </a>
-            </div>
+    <div className="flex bg-[#f2e8e4] h-screen rounded-lg  overflow-hidden">
+      {/* Left section with social icons */}
+      <div className="flex flex-col items-center justify-center p-4 bg-[#d2b48c]">
+        <div className="mb-8 transform -rotate-90">
+          <p className="text-lg font-semibold text-gray-800">Follow Us</p>
+        </div>
+        <div className="flex flex-col items-center space-y-4">
+          <a href="#" className="text-red-600 hover:text-red-800">
+            <FaFacebook size={30} />
+          </a>
+          <a href="#" className="text-red-600 hover:text-red-800">
+            <FaTwitter size={30} />
+          </a>
+          <a href="#" className="text-red-600 hover:text-red-800">
+            <FaInstagram size={30} />
+          </a>
+        </div>
+      </div>
+
+      {/* Right section with heading, subheading, and buttons */}
+      <div className="grid grid-cols-2 justify-center items-center">
+        
+        <div className="p-8 text-center">
+          <h1 className="text-4xl font-bold mb-4">
+            Unlock A Brighter Future. Find Your Dream Home.
+          </h1>
+          <div className="flex justify-center space-x-4">
+            <button className="px-6 py-2 text-white bg-blue-600 hover:bg-blue-700 rounded-lg">
+              Explore Condos
+            </button>
+            <button className="px-6 py-2 text-blue-600 border border-blue-600 hover:bg-blue-100 rounded-lg flex items-center">
+              <span className="mr-2">📞</span> Book A Call
+            </button>
           </div>
         </div>
-      </section>
-      {/* Social media links */}
-      <div className="absolute top-1/2 right-0 transform -translate-y-1/2 hidden lg:flex lg:flex-col space-y-2 md:space-y-3 mr-2 md:mr-4">
         <Image
-          src="https://i.ibb.co/8xHH32n/Frame-1000008096.png"
-          height={397}
-          width={43}
-          alt="Follow Us with vertical line"
-          className="w-4 md:w-auto 2xl:block hidden"
-        />
-        <a
-          href="https://www.facebook.com/"
-          className="bg-[#88A9C3] rounded flex items-center justify-center py-1 px-1 transition-transform duration-300 ease-in-out transform hover:scale-110"
-        >
-          <Image
-            src="https://i.ibb.co/L90bYVc/Mask-group-12.png"
-            height={40}
-            width={40}
-            alt="Facebook"
-            className=""
-          />
-        </a>
-        <a
-          href="https://x.com/"
-          className="bg-[#88A9C3] rounded flex items-center justify-center py-1 px-1 transition-transform duration-300 ease-in-out transform hover:scale-110"
-        >
-          <Image
-            src="https://i.ibb.co/Lxkc01C/Mask-group-13.png"
-            height={40}
-            width={40}
-            alt="Twitter"
-            className=""
-          />
-        </a>
-        <a
-          href="https://www.instagram.com/"
-          className="bg-[#88A9C3] rounded flex items-center justify-center py-1 px-1 transition-transform duration-300 ease-in-out transform hover:scale-110"
-        >
-          <Image
-            src="https://i.ibb.co/Dtp1Q50/Mask-group-14.png"
-            height={40}
-            width={40}
-            alt="Instagram"
-            className=""
-          />
-        </a>
+            src="https://i.ibb.co/pKsVYsR/Rectangle-3883.png"
+            alt="Living Room"
+            height={815}
+            width={960}
+            className="h-full object-cover"
+            c
+          />{" "}
       </div>
     </div>
   );
-}
+};
+
+export default HeroSection;

@@ -4,7 +4,7 @@
 /* fonts  */
 body {
   font-family: 'Merriweather', serif;
-  background-color: #2B4257;
+  background-color: #D0B49F;
 }
 .font-merriweather {
   font-family: 'Merriweather', serif;
@@ -20,4 +20,8 @@ body {
 
 html{
   scroll-behavior: smooth;
+}
+.custom-shadow{
+  box-shadow: 0px 4px 20px 0px #00000026;
+
 }

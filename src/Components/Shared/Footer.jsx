@@ -1,106 +1,150 @@
 /* eslint-disable react/no-unescaped-entities */
 import Image from "next/image";
-import React from "react";
 
 export default function Footer() {
   return (
-    <div className="bg-[#090909E5] py-12 overflow-hidden">
+    <div className="bg-accent py-8 md:py-12 mt-16 md:mt-20 xl:mt-24 overflow-hidden">
       <div className="max-w-screen-xl mx-auto px-4 md:px-8">
-        <div className="flex flex-col lg:flex-row gap-24 lg:gap-20 items-start lg:items-end justify-between">
+        <Image
+          src="https://i.ibb.co/RQmRxDg/Frame-1000008324-1.png" // Replace with your local image path
+          height="120"
+          width="200"
+          alt="footer logo"
+          className="mb-12 -mt-12"
+          data-aos="fade-down" // AOS animation
+        />
+        <div className="flex flex-col lg:flex-row gap-8 lg:gap-16 items-start justify-between">
           {/* Left Section */}
-          <div className="w-full lg:w-[70%]">
-            <Image
-              data-aos="fade-up"
-              className="-mt-12 mb-8"
-              src="https://i.ibb.co/vmqW2Cg/Frame-1000008324.png"
-              height="140"
-              width="240"
-              alt="footer logo"
-            />
-            <h1 className="text-neutral text-3xl md:text-[42px]  font-normal leading-[40px] md:leading-[50px]  font-merriweather">
-              Get In Touch
+          <div className="w-full lg:w-1/3" data-aos="fade-up">
+            <h1 className="text-neutral text-2xl md:text-3xl font-normal leading-tight md:leading-snug font-merriweather">
+              Matthew Davidson
             </h1>
-            <p className="text-base md:text-xl  font-raleway text-[#F3E3E2CC] mt-4">
-              Connect with Us Today for Personalized Assistance and Expert
-              Guidance on Your Real Estate Journey. Let's Transform Your Dreams
-              into Reality.
+            <p className="text-base md:text-lg text-neutral mt-4">
+              A Real Estate Professional, top performing agent with 15 years of
+              NYC real estate experience, exceptional service and expert
+              guidance for all your real estate needs.
             </p>
-            <a href="#contact">
-              <button className="bg-[#88A9C3] hover:bg-[#6e8fa3] text-black text-base md:text-xl lg:text-2xl font-roboto mt-6 px-6 md:px-8 py-2 md:py-2.5 rounded-xl font-medium transition-colors duration-300 ease-in-out">
-                Let's Talk
-              </button>
-            </a>
+            <h5 className="text-neutral text-2xl md:text-3xl mt-8 font-normal leading-tight font-merriweather">
+              Contact Us
+            </h5>
+            <div className="mt-6 space-y-4 md:space-y-6 text-[#E0D7C7] text-base">
+              <div className="flex items-center ">
+                <div className="bg-neutral p-1 rounded">
+                  <Image
+                    src="https://i.ibb.co/L5D8wtQ/Mask-group-23.png"
+                    alt="Phone"
+                    width={30}
+                    height={30}
+                  />
+                </div>
+                <span className="ml-4">(555) 123-4567</span>
+              </div>
+              <div className="flex items-center">
+                <div className="bg-neutral p-1 rounded">
+                  <Image
+                    src="https://i.ibb.co/7kQ7Kpy/Mask-group-30.png"
+                    alt="Phone"
+                    width={30}
+                    height={30}
+                  />
+                </div>
+                <span className="ml-4">matthew.davidson@xyzrealty.com</span>
+              </div>
+              <div className="flex items-center">
+                <div className="bg-neutral p-1 rounded">
+                  <Image
+                    src="https://i.ibb.co/9yysvG0/Mask-group-31.png"
+                    alt="Phone"
+                    width={30}
+                    height={30}
+                  />
+                </div>
+                <span className="ml-4">1234 Broadway, New York, NY 10001</span>
+              </div>
+            </div>
           </div>
-          {/* Right Section */}
-          <div className="w-full lg:w-auto">
-            <div className="flex gap-4 mb-6">
-              <a
-                href="#"
-                className="transition-transform duration-300 ease-in-out transform hover:scale-110"
-              >
-                <Image
-                  src="https://i.ibb.co/HCQd3Zg/Frame-456-7.png"
-                  height="40"
-                  width="40"
-                  alt="Facebook"
-                />
-              </a>
-              <a
-                href="#"
-                className="transition-transform duration-300 ease-in-out transform hover:scale-110"
-              >
-                <Image
-                  src="https://i.ibb.co/GcSY5jK/Frame-457-4.png"
-                  height="40"
-                  width="40"
-                  alt="Twitter"
-                />
-              </a>
-              <a
-                href="#"
-                className="transition-transform duration-300 ease-in-out transform hover:scale-110"
-              >
-                <Image
-                  src="https://i.ibb.co/HV3P13s/Frame-458-7.png"
-                  height="40"
-                  width="40"
-                  alt="Instagram"
-                />
-              </a>
-            </div>
 
-            <h1 className="text-neutral text-3xl md:text-[42px]   font-normal leading-[40px] md:leading-[50px]  font-merriweather">
-              Quick Links
+          {/* Middle Section */}
+          <div className="w-full lg:w-1/3 lg:px-8" data-aos="fade-right">
+            <h1 className="text-neutral text-2xl md:text-3xl font-normal leading-tight md:leading-snug font-merriweather">
+              Useful Links
             </h1>
-            <div className="flex flex-wrap gap-4 text-base md:text-xl  text-[#F3E3E2CC] font-roboto mt-4">
-              <a href="#home" className="hover:text-neutral">
-                Home
-              </a>
-              <a href="#aboutme" className="hover:text-neutral">
-                About Me
-              </a>
-              <a href="#services" className="hover:text-neutral">
-                Services
-              </a>
-              <a href="#listing" className="hover:text-neutral">
-                Featured Property
-              </a>
-              <a href="#neighborhood" className="hover:text-neutral">
-                Neighborhood
-              </a>
-              <a href="#testimonial" className="hover:text-neutral">
-                Testimonial
-              </a>
-              <a href="#insights" className="hover:text-neutral">
-                Insights
-              </a>
-              <a href="#contact" className="hover:text-neutral">
-                Contact
-              </a>
-              <a href="#work-process" className="hover:text-neutral">
-                Work Process
-              </a>
-            </div>
+            <ul className="mt-4 space-y-2 text-sm md:text-lg text-[#E0D7C7] font-roboto">
+              <li>
+                <a href="#home" className="hover:text-neutral">
+                  Home
+                </a>
+              </li>
+              <li>
+                <a href="#aboutme" className="hover:text-neutral">
+                  About Me
+                </a>
+              </li>
+              <li>
+                <a href="#services" className="hover:text-neutral">
+                  Services
+                </a>
+              </li>
+              <li>
+                <a href="#listing" className="hover:text-neutral">
+                  Featured Condos
+                </a>
+              </li>
+              <li>
+                <a href="#testimonial" className="hover:text-neutral">
+                  Testimonial
+                </a>
+              </li>
+              <li>
+                <a href="#insights" className="hover:text-neutral">
+                  Insights
+                </a>
+              </li>
+              <li>
+                <a href="#contact" className="hover:text-neutral">
+                  Contact Me
+                </a>
+              </li>
+            </ul>
+          </div>
+
+          {/* Right Section */}
+          <div
+            className="w-full lg:w-1/3 lg:pl-8 border border-y-0 border-r-0 border-l-0 lg:border-l"
+            data-aos="fade-left"
+          >
+            <h1 className="text-neutral text-2xl md:text-3xl font-normal leading-tight md:leading-snug text-center font-merriweather">
+              Contact Us
+            </h1>
+            <form className="mt-4 space-y-4 text-base md:text-base">
+              <div className="flex flex-col md:flex-row space-y-4 md:space-y-0 md:space-x-4">
+                <input
+                  type="text"
+                  placeholder="Name"
+                  className="w-full p-2 bg-transparent border-b-2 border-[#F3E3E2CC] focus:border-primary"
+                />
+                <input
+                  type="text"
+                  placeholder="Address"
+                  className="w-full p-2 bg-transparent border-b-2 border-[#F3E3E2CC] focus:border-primary"
+                />
+              </div>
+              <input
+                type="email"
+                placeholder="Your Email"
+                className="w-full p-2 bg-transparent border-b-2 border-[#F3E3E2CC] focus:border-primary"
+              />
+              <textarea
+                placeholder="Type Your Message ..."
+                className="w-full p-2 bg-transparent border-b-2 border-[#F3E3E2CC] focus:border-primary"
+              ></textarea>
+              <button
+                type="submit"
+                className="w-full p-1.5 bg-neutral text-accent text-lg rounded-md transition hover:bg-[#e6d5d2]"
+              >
+                Send
+              </button>
+            </form>
           </div>
         </div>
       </div>

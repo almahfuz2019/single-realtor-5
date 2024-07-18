@@ -1,115 +1,188 @@
-"use client";
+/* eslint-disable react/no-unescaped-entities */
+import Image from "next/image";
 import React from "react";
 
-export default function WorkProcess() {
+const WorkProcess = () => {
   return (
-    <div
-      id="work-process"
-      className="max-w-screen-xl mx-auto py-24 lg:py-32  px-4 sm:px-8 lg:px-8 overflow-hidden"
-    >
-      <header className="text-center flex flex-col gap-y-3 md:gap-y-6 mb-10 md:mb-20">
-        <h1
-          className="text-3xl md:text-[42px]  lg:text-5xl font-merriweather font-normal text-neutral"
-          data-aos="fade-up"
-        >
-          Work Process
-        </h1>
-        <p
-          className="text-base md:text-xl lg:text-2xl font-normal text-[#F3E3E2B2] font-raleway mt-3"
-          data-aos="fade-up"
-          data-aos-delay="100"
-        >
-          Streamlined Steps to Your Dream Home: Our Proven Process Ensures a
-          Smooth Journey from Initial Consultation to Closing and Beyond.
-        </p>
+    <div className=" mx-auto  pb-28">
+      <Image
+        src="https://i.ibb.co/Jvgn7sT/Line-27.png"
+        height={15}
+        width={1920}
+        alt=""
+        className="mb-28"
+      />
+      {/* Header section */}
+      <header className="flex items-center  justify-center gap-10 mb-20">
+        <div
+          data-aos="fade-right"
+          className="bg-accent hidden lg:block w-[233px] h-[3px]"
+        ></div>
+        <div>
+          <h1
+            data-aos="fade-up"
+            className="font-normal text-sm text-center lg:text-start"
+          >
+            How we work
+          </h1>
+          <p
+            data-aos="fade-up"
+            className="font-bold text-center lg:text-start text-5xl text-accent mt-3"
+          >
+            Work Process
+          </p>
+        </div>
       </header>
-      <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-16 items-start mb-8  lg:mb-0">
-        <div
-          className="bg-neutral py-6 px-6 md:py-7 md:px-8 lg:py-8 lg:px-10 rounded-2xl flex items-start justify-between gap-6"
-          data-aos="fade-up"
-          data-aos-delay="100"
-        >
-          <p className="text-2xl md:text-3xl lg:text-4xl font-merriweather bg-primary inline-block text-neutral px-4 py-1 rounded-lg">
-            1
-          </p>
+      <div className="space-y-0 max-w-screen-xl mx-auto">
+        {/* Step 1 */}
+        <div className="flex justify-center">
+          <div className="flex flex-col items-center mr-8">
+            <div className=" bg-[#1D304B] rounded w-12 h-12 flex items-center justify-center text-4xl font-bold text-neutral">
+              1
+            </div>{" "}
+            <div className="w-px bg-accent flex-grow "></div>
+          </div>
           <div>
-            <h5 className="font-normal text-lg md:text-xl lg:text-2xl text-primary font-merriweather mb-4 lg:mb-6">
+            <h3 className="text-3xl font-semibold mb-4 text-accent">
               Initial Consultation and Needs Assessment
-            </h5>
-            <p className="text-sm md:text-base lg:text-xl font-normal font-raleway text-[#14202ECC] leading-6 lg:leading-8">
-              We begin by meeting with clients to understand their unique needs,
-              preferences, and goals. This involves discussing budget, desired
-              property features, and any specific requirements to tailor a
-              personalized real estate plan.
-            </p>
+            </h3>
+            <ul className="list-disc pl-5 space-y-1 text-accent">
+              <li className="flex items-center gap-2 text-xl">
+                {" "}
+                <Image
+                  src="https://i.ibb.co/GQ7JyTh/checkmark-square-01-1.png/"
+                  height={28}
+                  width={28}
+                  alt=""
+                />{" "}
+                Contact and Schedule Consultation
+              </li>
+              <li className="flex items-center gap-2 text-xl">
+                {" "}
+                <Image
+                  src="https://i.ibb.co/GQ7JyTh/checkmark-square-01-1.png/"
+                  height={28}
+                  width={28}
+                  alt=""
+                />
+                Understanding Client's Goals
+              </li>
+              <li className="flex items-center gap-2 text-xl">
+                {" "}
+                <Image
+                  src="https://i.ibb.co/GQ7JyTh/checkmark-square-01-1.png/"
+                  height={28}
+                  width={28}
+                  alt=""
+                />
+                Market Analysis and Strategy Development
+              </li>
+            </ul>
+            <button className="mt-6 mb-16 ml-6 text-xl text-accent px-6 py-2 border border-accent rounded-lg">
+              See Details
+            </button>
           </div>
         </div>
-
-        <div
-          className="bg-neutral py-6 px-6 md:py-7 md:px-8 lg:py-8 lg:px-10 rounded-2xl flex items-start justify-between gap-6 lg:mt-28"
-          data-aos="fade-up"
-          data-aos-delay="200"
-        >
-          <p className="text-2xl md:text-3xl lg:text-4xl font-merriweather bg-primary inline-block text-neutral px-4 py-1 rounded-lg">
-            2
-          </p>
+        {/* Step 2 */}
+        <div className="flex justify-center">
+          <div className="flex flex-col items-center mr-8">
+            <div className=" bg-[#1D304B] rounded w-12 h-12 flex items-center justify-center text-4xl font-bold text-neutral">
+              2
+            </div>{" "}
+            <div className="w-px bg-accent flex-grow "></div>
+          </div>
           <div>
-            <h5 className="font-normal text-lg md:text-xl lg:text-2xl text-primary font-merriweather mb-4 lg:mb-6">
-              Market Research and Property Search
-            </h5>
-            <p className="text-sm md:text-base lg:text-xl font-normal font-raleway text-[#14202ECC] leading-6 lg:leading-8">
-              Leveraging in-depth knowledge of the local market and extensive
-              network, I conduct thorough research to identify suitable
-              properties. I provide clients with a curated list of options that
-              meet their criteria, ensuring a focused and efficient search
-              process.
-            </p>
+            <h3 className="text-3xl font-semibold mb-4 text-accent">
+              Initial Consultation and Needs Assessment
+            </h3>
+            <ul className="list-disc pl-5 space-y-1 text-accent">
+              <li className="flex items-center gap-2 text-xl">
+                {" "}
+                <Image
+                  src="https://i.ibb.co/GQ7JyTh/checkmark-square-01-1.png/"
+                  height={28}
+                  width={28}
+                  alt=""
+                />{" "}
+                Contact and Schedule Consultation
+              </li>
+              <li className="flex items-center gap-2 text-xl">
+                {" "}
+                <Image
+                  src="https://i.ibb.co/GQ7JyTh/checkmark-square-01-1.png/"
+                  height={28}
+                  width={28}
+                  alt=""
+                />
+                Understanding Client's Goals
+              </li>
+              <li className="flex items-center gap-2 text-xl">
+                {" "}
+                <Image
+                  src="https://i.ibb.co/GQ7JyTh/checkmark-square-01-1.png/"
+                  height={28}
+                  width={28}
+                  alt=""
+                />
+                Market Analysis and Strategy Development
+              </li>
+            </ul>
+            <button className="mt-6 mb-16 ml-6 text-xl text-accent px-6 py-2 border border-accent rounded-lg">
+              See Details
+            </button>
           </div>
         </div>
-      </div>
-      <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-16 items-start">
-        <div
-          className="bg-neutral py-6 px-6 md:py-7 md:px-8 lg:py-8 lg:px-10 rounded-2xl flex items-start justify-between gap-6"
-          data-aos="fade-up"
-          data-aos-delay="300"
-        >
-          <p className="text-2xl md:text-3xl lg:text-4xl font-merriweather bg-primary inline-block text-neutral px-4 py-1 rounded-lg">
-            3
-          </p>
-          <div>
-            <h5 className="font-normal text-lg md:text-xl lg:text-2xl text-primary font-merriweather mb-4 lg:mb-6">
-              Property Tours and Evaluation
-            </h5>
-            <p className="text-sm md:text-base lg:text-xl font-normal font-raleway text-[#14202ECC] leading-6 lg:leading-8">
-              I arrange and accompany clients on property tours, offering expert
-              insights and evaluations of each property. I highlight key
-              features, potential drawbacks, and help clients envision how each
-              property could meet their needs.
-            </p>
+        {/* Step 23 */}
+        <div className="flex justify-center">
+          <div className="flex flex-col items-center mr-8">
+            <div className=" bg-[#1D304B] rounded w-12 h-12 flex items-center justify-center text-4xl font-bold text-neutral">
+              3
+            </div>{" "}
           </div>
-        </div>
-
-        <div
-          className="bg-neutral py-6 px-6 md:py-7 md:px-8 lg:py-8 lg:px-10 rounded-2xl flex items-start justify-between gap-6 lg:mt-28"
-          data-aos="fade-up"
-          data-aos-delay="400"
-        >
-          <p className="text-2xl md:text-3xl lg:text-4xl font-merriweather bg-primary inline-block text-neutral px-4 py-1 rounded-lg">
-            4
-          </p>
           <div>
-            <h5 className="font-normal text-lg md:text-xl lg:text-2xl text-primary font-merriweather mb-4 lg:mb-6">
-              Negotiation and Closing
-            </h5>
-            <p className="text-sm md:text-base lg:text-xl font-normal font-raleway text-[#14202ECC] leading-6 lg:leading-8">
-              Once a property is selected, I use my strong negotiation skills to
-              secure the best possible terms for clients and manage all aspects
-              of the closing process, from handling paperwork to coordinating
-              with other professionals, ensuring a stress-free transaction.
-            </p>
+            <h3 className="text-3xl font-semibold mb-4 text-accent">
+              Initial Consultation and Needs Assessment
+            </h3>
+            <ul className="list-disc pl-5 space-y-1 text-accent">
+              <li className="flex items-center gap-2 text-xl">
+                {" "}
+                <Image
+                  src="https://i.ibb.co/GQ7JyTh/checkmark-square-01-1.png/"
+                  height={28}
+                  width={28}
+                  alt=""
+                />{" "}
+                Contact and Schedule Consultation
+              </li>
+              <li className="flex items-center gap-2 text-xl">
+                {" "}
+                <Image
+                  src="https://i.ibb.co/GQ7JyTh/checkmark-square-01-1.png/"
+                  height={28}
+                  width={28}
+                  alt=""
+                />
+                Understanding Client's Goals
+              </li>
+              <li className="flex items-center gap-2 text-xl">
+                {" "}
+                <Image
+                  src="https://i.ibb.co/GQ7JyTh/checkmark-square-01-1.png/"
+                  height={28}
+                  width={28}
+                  alt=""
+                />
+                Market Analysis and Strategy Development
+              </li>
+            </ul>
+            <button className="mt-6 mb-16 ml-6 text-xl text-accent px-6 py-2 border border-accent rounded-lg">
+              See Details
+            </button>
           </div>
         </div>
       </div>
     </div>
   );
-}
+};
+
+export default WorkProcess;

@@ -1,137 +1,138 @@
 "use client";
-/* eslint-disable react/no-unescaped-entities */
-import Image from "next/image";
 import React from "react";
+import Image from "next/image";
+import { Tab, Tabs, TabList, TabPanel } from "react-tabs";
+import "react-tabs/style/react-tabs.css";
 
-export default function Services() {
+const Services = () => {
   return (
-    <div
-      id="services"
-      className="bg-secondary py-12 md:py-24 text-neutral overflow-hidden"
-    >
-      <div className="max-w-screen-xl mx-auto px-4 md:px-8 lg:px-8">
-        <section className="grid grid-cols-1 lg:flex gap-8 md:gap-16 justify-start">
-          {/* Header section with title, description, and button */}
-          <div className="lg:w-[100%]" data-aos="fade-right">
-            <h1 className="text-3xl md:text-[42px]  font-merriweather text-neutral">
-              Services We Serve
-            </h1>
-            <p className="text-base md:text-xl font-raleway text-justify text-[#F3E3E2B2] mt-4 md:mt-6">
-              Explore our comprehensive real estate services, including buying,
-              selling, market analysis, and personalized support, to help you
-              achieve your property goals with confidence.
-            </p>
-            <div className="flex justify-end lg:justify-start items-end">
-              <button className="mt-6 md:mt-8 bg-primary px-4 md:px-5 py-2 md:py-2.5  rounded-lg text-neutral font-medium text-base md:text-xl font-roboto transition-all duration-300 ease-in-out hover:bg-neutral hover:text-primary hover:shadow-lg hover:-translate-y-1">
-                Get In Touch
+    <div className="max-w-screen-xl mx-auto  py-28">
+      {/* Header section */}
+      <header className="flex items-center  justify-center gap-10 mb-24">
+        <div
+          data-aos="fade-right"
+          className="bg-accent hidden lg:block w-[233px] h-[3px]"
+        ></div>
+        <div>
+          <h1
+            data-aos="fade-up"
+            className="font-normal text-sm text-center lg:text-start"
+          >
+            Services
+          </h1>
+          <p
+            data-aos="fade-up"
+            className="font-bold text-center lg:text-start text-5xl text-accent mt-3"
+          >
+            What We Provide
+          </p>
+        </div>
+      </header>
+      <Tabs>
+        <div className="mb-4 flex justify-center">
+          <TabList className="flex space-x-4">
+            <Tab
+              className="px-4 py-2 text-sm font-medium text-gray-700  rounded-[32px] cursor-pointer hover:bg-primary hover:text-white"
+              selectedClassName="bg-primary text-white"
+            >
+              Buy Property
+            </Tab>
+            <Tab
+              className="px-4 py-2 text-sm font-medium text-gray-700  rounded-[32px] cursor-pointer hover:bg-primary hover:text-white"
+              selectedClassName="bg-primary text-white"
+            >
+              Sell Property
+            </Tab>
+            <Tab
+              className="px-4 py-2 text-sm font-medium text-gray-700  rounded-[32px] cursor-pointer hover:bg-primary hover:text-white"
+              selectedClassName="bg-primary text-white"
+            >
+              Rent Property
+            </Tab>
+            <Tab
+              className="px-4 py-2 text-sm font-medium text-gray-700  rounded-[32px] cursor-pointer hover:bg-primary hover:text-white"
+              selectedClassName="bg-primary text-white"
+            >
+              Home Evaluation
+            </Tab>
+            <Tab
+              className="px-4 py-2 text-sm font-medium text-gray-700  rounded-[32px] cursor-pointer hover:bg-primary hover:text-white"
+              selectedClassName="bg-primary text-white"
+            >
+              Mortgage Calculator
+            </Tab>
+            <Tab
+              className="px-4 py-2 text-sm font-medium text-gray-700  rounded-[32px] cursor-pointer hover:bg-primary hover:text-white"
+              selectedClassName="bg-primary text-white"
+            >
+              New Buyers Guideline
+            </Tab>
+          </TabList>
+        </div>
+
+        <TabPanel className="bg-[#E4D4C8] p-10 rounded-2xl">
+          <div className="lg:flex items-end lg:space-x-8">
+            <div className="flex items-end gap-4 mb-4 lg:mb-0">
+              <div className="row-span-2">
+                <Image
+                  src="https://i.ibb.co/B3bbSHh/Rectangle-3889.png"
+                  alt="Signing Documents"
+                  className="rounded-[32px] "
+                  width={359}
+                  height={502}
+                />
+              </div>
+              <div className="flex flex-col gap-5">
+                <Image
+                  src="https://i.ibb.co/S5tZ3w4/Rectangle-3890.png"
+                  alt="Home Evaluation"
+                  className="rounded-[32px] "
+                  width={200}
+                  height={200}
+                />{" "}
+                <Image
+                  src="https://i.ibb.co/jWV5YZG/Rectangle-3891.png"
+                  alt="Living Room"
+                  className="rounded-[32px] "
+                  width={200}
+                  height={600}
+                />
+              </div>
+            </div>
+            <div className="lg:flex-1">
+              <h3 className="text-3xl font-semibold mb-4">Home Evaluation</h3>
+              <p className="text-[#201A1ECC] text-xl mb-6">
+                Comprehensive and Accurate Property Valuations: Gain Insights
+                into Your Home's Market Value with Our Expert Evaluations. We
+                Provide Detailed Assessments to Help You Make Informed Decisions
+                Whether You're Planning to Sell, Refinance, or Simply Curious
+                About Your Property's Worth.
+              </p>
+              <button className="px-6 py-2 text-xl text-white bg-primary rounded-[32px]">
+                Evaluate
               </button>
             </div>
           </div>
-          {/* Service cards section */}
-          <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 text-primary">
-            {/* Buy Home Card */}
-            <div
-              className="bg-neutral px-6 md:px-6 py-8 md:py-8 flex flex-col gap-2 rounded-2xl items-center transition-transform duration-300 ease-in-out transform hover:scale-105 hover:shadow-xl"
-              data-aos="fade-up"
-            >
-              <Image
-                src="https://i.ibb.co/Bgxy096/Mask-group-15.png"
-                height={64}
-                width={64}
-                alt="Buy Home"
-              />
-              <h5 className="text-lg md:text-xl text-center font-merriweather text-primary">
-                Buy Home
-              </h5>
-              <p className="text-sm md:text-base font-raleway text-center leading-6">
-                Find Your Dream Home with Expert Guidance and Exclusive
-                Listings.
-              </p>
-              <a
-                href="#"
-                className="font-roboto text-xs md:text-sm border border-primary rounded-xl px-3 md:px-4 py-1.5 md:py-2 mt-6 transition-colors duration-300 ease-in-out hover:bg-primary hover:text-neutral"
-              >
-                See All Condos
-              </a>
-            </div>
-            {/* Sell Property Card */}
-            <div
-              className="bg-neutral px-6 md:px-6 py-8 md:py-8 flex flex-col gap-2 rounded-2xl items-center transition-transform duration-300 ease-in-out transform hover:scale-105 hover:shadow-xl"
-              data-aos="fade-up"
-            >
-              <Image
-                src="https://i.ibb.co/kGcRrNB/Mask-group-16.png"
-                height={64}
-                width={64}
-                alt="Sell Property"
-              />
-              <h5 className="text-lg md:text-xl text-center font-merriweather text-primary">
-                Sell Property
-              </h5>
-              <p className="text-sm md:text-base font-raleway text-center leading-6">
-                Maximize Your Home's Value with Expert Marketing and
-                Personalized Selling Strategies.
-              </p>
-              <a
-                href="#"
-                className="font-roboto text-xs md:text-sm border border-primary rounded-xl px-3 md:px-4 py-1.5 md:py-2 mt-6 transition-colors duration-300 ease-in-out hover:bg-primary hover:text-neutral"
-              >
-                Add Condos
-              </a>
-            </div>
-            {/* Market Analysis Card */}
-            <div
-              className="bg-neutral px-6 md:px-6 py-8 md:py-8 flex flex-col gap-2 rounded-2xl items-center transition-transform duration-300 ease-in-out transform hover:scale-105 hover:shadow-xl"
-              data-aos="fade-up"
-            >
-              <Image
-                src="https://i.ibb.co/17Zwkyf/Mask-group-17.png"
-                height={64}
-                width={64}
-                alt="Market Analysis"
-              />
-              <h5 className="text-lg md:text-xl text-center font-merriweather text-primary">
-                Market Analysis
-              </h5>
-              <p className="text-sm md:text-base font-raleway text-center leading-6">
-                Gain Insightful Market Trends and Data to Make Informed Real
-                Estate Decisions.
-              </p>
-              <a
-                href="#"
-                className="font-roboto text-xs md:text-sm border border-primary rounded-xl px-3 md:px-4 py-1.5 md:py-2 mt-6 transition-colors duration-300 ease-in-out hover:bg-primary hover:text-neutral"
-              >
-                See Details
-              </a>
-            </div>
-            {/* Personalized Support Card */}
-            <div
-              className="bg-neutral px-6 md:px-6 py-8 md:py-8 flex flex-col gap-2 rounded-2xl items-center transition-transform duration-300 ease-in-out transform hover:scale-105 hover:shadow-xl"
-              data-aos="fade-up"
-            >
-              <Image
-                src="https://i.ibb.co/LNX7Z66/Mask-group-18.png"
-                height={64}
-                width={64}
-                alt="Personalized Support"
-              />
-              <h5 className="text-lg md:text-xl text-center font-merriweather text-primary">
-                Personalized Support
-              </h5>
-              <p className="text-sm md:text-base font-raleway text-center leading-6">
-                Find Your Dream Home with Expert Guidance and Exclusive
-                Listings.
-              </p>
-              <a
-                href="#"
-                className="font-roboto text-xs md:text-sm border border-primary rounded-xl px-3 md:px-4 py-1.5 md:py-2 mt-6 transition-colors duration-300 ease-in-out hover:bg-primary hover:text-neutral"
-              >
-                Contact Me
-              </a>
-            </div>
-          </div>
-        </section>
-      </div>
+        </TabPanel>
+        {/* Add content for other tabs in similar TabPanel blocks */}
+        <TabPanel>
+          <div>Content for Buy Property</div>
+        </TabPanel>
+        <TabPanel>
+          <div>Content for Sell Property</div>
+        </TabPanel>
+        <TabPanel>
+          <div>Content for Rent Property</div>
+        </TabPanel>
+        <TabPanel>
+          <div>Content for Mortgage Calculator</div>
+        </TabPanel>
+        <TabPanel>
+          <div>Content for New Buyers Guideline</div>
+        </TabPanel>
+      </Tabs>
     </div>
   );
-}
+};
+
+export default Services;
