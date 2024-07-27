@@ -23,7 +23,7 @@ export default function Navbar() {
 
   return (
     <header>
-      <div className="bg-[#091202] relative z-10 font-raleway">
+      <div className="bg-[#E4D4C8] relative z-10 font-raleway">
         <nav className="navbar z-50 text-[#88A9C3] mx-auto py-2 font-montserrat px-4 max-w-screen-xl flex justify-between items-center">
           <div className="navbar-start">
             <a href="#home">
@@ -31,7 +31,7 @@ export default function Navbar() {
                 className="h-12 md:h-16 xl:h-20 w-auto"
                 height="80"
                 width="160"
-                src="https://i.ibb.co/zXLmZ5r/Frame-1000008084.png"
+                src="https://i.ibb.co/NWJptt7/Frame-1000008084.png"
                 alt="Logo"
               />
             </a>
@@ -50,7 +50,7 @@ export default function Navbar() {
                 <li key={index}>
                   <a
                     href={`#${item.toLowerCase().replace(" ", "")}`}
-                    className="text-[#88A9C3] hover:text-white text-base xl:text-lg 2xl:text-xl font-medium"
+                    className="text-[#201A1ECC] hover:text-[#201a1e] text-base xl:text-lg 2xl:text-xl font-medium"
                   >
                     {item}
                   </a>
@@ -61,7 +61,7 @@ export default function Navbar() {
 
           <div className="navbar-end flex items-center">
             <a href="#contact">
-              <button className="  xl:px-5 xl:py-2 2xl:px-6 2xl:py-3 xl:text-xl 2xl:text-2xl font-roboto bg-neutral px-4 md:px-5 py-2 md:py-2.5  rounded-lg text-primary font-medium text-base md:text-xl font-roboto transition-all duration-300 ease-in-out hover:bg-[#2B4257] hover:text-neutral hover:shadow-lg hover:-translate-y-1">
+              <button className="  xl:px-5 xl:py-2 2xl:px-6 2xl:py-3 xl:text-xl 2xl:text-2xl font-roboto bg-[#2B4257] px-4 md:px-5 py-2 md:py-2.5  rounded-lg text-neutral font-medium text-base md:text-xl font-roboto transition-all duration-300 ease-in-out hover:bg-[#861E32]  hover:text-neutral hover:shadow-lg ">
                 Get In Touch
               </button>
             </a>

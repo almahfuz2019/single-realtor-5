@@ -3,25 +3,24 @@
 @tailwind utilities;
 /* fonts  */
 body {
-  font-family: 'Merriweather', serif;
-  background-color: #D0B49F;
+  font-family: "Merriweather", serif;
+  background-color: #d0b49f;
 }
 .font-merriweather {
-  font-family: 'Merriweather', serif;
+  font-family: "Merriweather", serif;
 }
 
 .font-raleway {
-  font-family: 'Raleway', sans-serif;
+  font-family: "Raleway", sans-serif;
 }
 
 .font-roboto {
-  font-family: 'Roboto', sans-serif;
+  font-family: "Roboto", sans-serif;
 }
 
-html{
-  scroll-behavior: smooth;
+html {
+  scroll-behavior: smooth !important;
 }
-.custom-shadow{
+.custom-shadow {
   box-shadow: 0px 4px 20px 0px #00000026;
-
 }

@@ -18,7 +18,7 @@ const Insights = () => {
       author: "Pedri Alcarez",
       date: "17 May, 2024",
       views: "1.1K",
-      title: "How to Stage Your Home for a Quick Sale",
+      title: "How to Stage Your Home for a Sale",
       image: "https://i.ibb.co/JvkVwQb/Rectangle-3897.png",
       excerpt:
         "Simple and Effective Staging Techniques to Make Your Home Irresistible to Buyers and Speed Up the Selling Process",
@@ -45,37 +45,40 @@ const Insights = () => {
     },
   ];
 
+  // Function to truncate text
+  const truncateText = (text, maxLength = 100) => {
+    return text.length > maxLength ? `${text.slice(0, maxLength)} ...` : text;
+  };
+
   return (
-    <div className="max-w-screen-xl mx-auto p-4 ">
-      <div className="flex justify-between items-center  mb-6">
-        {/* Header section */}
-        <header className="flex items-center  justify-center gap-10 mb-24">
+    <section className=" mx-auto  px-4 py-28 md:p-8 md:py-36 xl:py-40 ">
+      {/* Header */}
+
+      <div className="flex flex-col gap-5 md:flex-row  justify-between items-center max-w-screen-xl mx-auto  px-4  pb-4 md:p-8      mb-16 md:mb-20 xl:mb-24 ">
+        <header className="flex items-center justify-center  gap-10 ">
           <div
             data-aos="fade-right"
             className="bg-accent hidden lg:block w-[233px] h-[3px]"
           ></div>
           <div>
-            <h1
-              data-aos="fade-up"
-              className="font-normal text-sm text-center lg:text-start"
-            >
+            <h1 className="font-normal text-sm text-center lg:text-start">
               Blog
             </h1>
-            <p
-              data-aos="fade-up"
-              className="font-bold text-center lg:text-start text-5xl text-accent mt-3"
-            >
+            <p className="font-bold text-center lg:text-start text-4xl md:text-5xl text-accent mt-1 xl:mt-3">
               Latest Insights
             </p>
           </div>
         </header>
-        <button className=" bg-primary px-6 py-2 rounded-lg text-neutral">
+
+        <button className="bg-primary px-6 py-2 rounded text-neutral text-xl transition-all duration-300 ease-in-out hover:bg-[#861E32]  hover:text-neutral hover:shadow-lg">
           See All
         </button>
       </div>
-      <div className="flex flex-col lg:flex-row gap-10  ">
+
+      {/* Main Content Section */}
+      <div className="flex flex-col lg:flex-row gap-10">
         {/* Featured Article */}
-        <div className="flex-1">
+        <article className="flex-1">
           <Image
             src={articles[0].image}
             alt={articles[0].title}
@@ -83,100 +86,106 @@ const Insights = () => {
             width={600}
             height={400}
           />
-          <div className="mt-4">
-            <div className="text-[#201A1ECC] flex gap-10">
+          <div className="mt-8">
+            <div className="flex gap-8 text-sm text-[#201A1ECC]">
               <p className="flex items-center gap-2">
                 <Image
                   src="https://i.ibb.co/HKpCWWx/image-108.png"
-                  height={24}
+                  alt="Author"
                   width={24}
-                  alt=""
+                  height={24}
                 />{" "}
                 {articles[0].author}
-              </p>{" "}
-              <p className="flex items-center gap-2">
-                <Image
-                  src="https://i.ibb.co/HKpCWWx/image-108.png"
-                  height={24}
-                  width={24}
-                  alt=""
-                />{" "}
-                | {articles[0].date}{" "}
               </p>
               <p className="flex items-center gap-2">
                 <Image
                   src="https://i.ibb.co/HKpCWWx/image-108.png"
-                  height={24}
+                  alt="Date"
                   width={24}
-                  alt=""
+                  height={24}
                 />{" "}
-                | {articles[0].views}
+                {articles[0].date}
+              </p>
+              <p className="flex items-center gap-2">
+                <Image
+                  src="https://i.ibb.co/HKpCWWx/image-108.png"
+                  alt="Views"
+                  width={24}
+                  height={24}
+                />{" "}
+                {articles[0].views}
               </p>
             </div>
 
-            <h3 className="text-2xl mt-2 font-semibold text-accent">
+            <h3 className="text-2xl mt-4 font-semibold text-accent">
               {articles[0].title}
             </h3>
             <p className="mt-2 text-[#201A1ECC]">{articles[0].excerpt}</p>
-            <button className="mt-2 text-[#1D304B] underline underline-offset-4">
+            <button className="mt-2 text-primary font-medium underline underline-offset-4 text-base">
               Read More
             </button>
           </div>
-        </div>
+        </article>
+
         {/* Smaller Articles */}
         <div className="flex-1 flex flex-col gap-6">
           {articles.slice(1).map((article) => (
-            <div key={article.id} className="flex gap-4">
+            <article
+              key={article.id}
+              className="flex flex-col sm:flex-row gap-4"
+            >
               <Image
                 src={article.image}
                 alt={article.title}
-                className="w-40 h-40 rounded-lg"
+                className="sm:w-40 sm:h-40 w-full rounded-lg object-cover"
                 width={225}
                 height={225}
               />
               <div>
-                <div className="text-[#201A1ECC] flex gap-10">
+                <div className="text-[#201A1ECC] flex gap-6 text-sm">
                   <p className="flex items-center gap-2">
                     <Image
                       src="https://i.ibb.co/HKpCWWx/image-108.png"
-                      height={24}
+                      alt="Author"
                       width={24}
-                      alt=""
+                      height={24}
                     />{" "}
                     {article.author}
-                  </p>{" "}
-                  <p className="flex items-center gap-2">
-                    <Image
-                      src="https://i.ibb.co/HKpCWWx/image-108.png"
-                      height={24}
-                      width={24}
-                      alt=""
-                    />{" "}
-                    | {article.date}{" "}
                   </p>
                   <p className="flex items-center gap-2">
                     <Image
                       src="https://i.ibb.co/HKpCWWx/image-108.png"
-                      height={24}
+                      alt="Date"
                       width={24}
-                      alt=""
+                      height={24}
                     />{" "}
-                    | {article.views}
+                    {article.date}
+                  </p>
+                  <p className="flex items-center gap-2">
+                    <Image
+                      src="https://i.ibb.co/HKpCWWx/image-108.png"
+                      alt="Views"
+                      width={24}
+                      height={24}
+                    />{" "}
+                    {article.views}
                   </p>
                 </div>
-                <h3 className="text-2xl mt-2 font-semibold text-accent">
+                <h3 className="text-xl mt-2 font-semibold text-accent">
                   {article.title}
                 </h3>
-                <p className="mt-2 text-[#201A1ECC]">{article.excerpt}</p>
-                <button className="mt-2 text-[#1D304B] underline underline-offset-4">
+                <p className="mt-2 text-[#201A1ECC]">
+                  {truncateText(article.excerpt)}
+                </p>
+                <button className="mt-2 text-primary font-medium underline underline-offset-4 text-base ">
                   Read More
                 </button>
               </div>
-            </div>
+            </article>
           ))}
         </div>
       </div>
-    </div>
+    </section>
   );
 };
 

@@ -82,15 +82,15 @@ const TestimonialSlider = () => {
 
   return (
     <div className="">
-      <div ref={sliderRef} className="keen-slider p-4">
+      <div ref={sliderRef} className="keen-slider md:py-5 md:px-5 px-0 ">
         {testimonials.map((testimonial, index) => (
           <div
             key={index}
-            className={`keen-slider__slide px-6 py-10 custom-shadow rounded-lg shadow-md ${
-              currentSlide === index ? "current-slide" : ""
+            className={`keen-slider__slide flex flex-col  gap-6 justify-between px-6 py-10 custom-shadow rounded-lg shadow-md ${
+              currentSlide === index ? "current-slide bg-[#E4D4C8]" : ""
             }`}
           >
-            <div className="flex justify-center gap-2 mt-5 border-b-1 border border-x-0 border-[#201A1E33] pb-8 mb-5 border-t-0">
+            <div className="flex justify-center gap-2  ">
               {Array.from({ length: testimonial.stars }).map((_, i) => (
                 <Image
                   key={i}
@@ -102,7 +102,7 @@ const TestimonialSlider = () => {
                 />
               ))}
             </div>
-            <p className="text-xl text-justify font-normal font-merriweather text-accent border-b-1 border border-x-0 border-[#201A1E33] pb-8 mb-5 border-t-0 px-6">
+            <p className="text-xl text-justify font-normal font-merriweather text-accent border-b-1 border border-x-0 border-[#201A1E33]  py-7  px-6">
               {testimonial.review}
             </p>
             <div className="flex items-center justify-center gap-3">
@@ -125,29 +125,30 @@ const TestimonialSlider = () => {
         ))}
       </div>
       {loaded && (
-        <div className="flex justify-center mt-4 items-center gap-4">
+        <div className="flex justify-center mt-16 items-center gap-2 md:gap-4">
           <Image
             onClick={() => instanceRef.current.prev()}
-            src="https://i.ibb.co/c6BWbKS/Frame-1000008071.png"
+            src="https://i.ibb.co/RP6z3PK/Frame-1000008147.png"
             height="50"
             width="50"
             alt="Previous"
-            className="rounded-full cursor-pointer transition-transform duration-300 ease-in-out transform hover:scale-110 p-0.5"
+            className="cursor-pointer rounded-full transition-transform transform hover:scale-110 w-auto h-8 sm:h-12"
           />
           <span className="text-xl">
             {currentSlide + 1} / {testimonials.length}
           </span>
           <Image
             onClick={() => instanceRef.current.next()}
-            src="https://i.ibb.co/1f270vg/Frame-1000008072.png"
+            src="https://i.ibb.co/xXJVmQ5/Frame-1000008148.png"
             height="50"
             width="50"
             alt="Next"
-            className="rounded-full cursor-pointer transition-transform duration-300 ease-in-out transform hover:scale-110 p-0.5"
+            className="cursor-pointer rounded-full transition-transform transform hover:scale-110 w-auto h-8 sm:h-12"
           />
         </div>
       )}
     </div>
   );
 };
+
 export default TestimonialSlider;
