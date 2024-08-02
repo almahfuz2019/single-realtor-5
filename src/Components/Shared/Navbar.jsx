@@ -23,15 +23,15 @@ export default function Navbar() {
 
   return (
     <header>
-      <div className="bg-[#E4D4C8] relative z-10 font-raleway">
-        <nav className="navbar z-50 text-[#88A9C3] mx-auto py-2 font-montserrat px-4 max-w-screen-xl flex justify-between items-center">
+      <div id="home" className="bg-[#E4D4C8] relative z-10 font-lato">
+        <nav className="navbar z-50 text-[#88A9C3] mx-auto py-2  px-4 max-w-screen-xl flex justify-between items-center">
           <div className="navbar-start">
             <a href="#home">
               <Image
                 className="h-12 md:h-16 xl:h-20 w-auto"
                 height="80"
                 width="160"
-                src="https://i.ibb.co/NWJptt7/Frame-1000008084.png"
+                src="/Images/logo.webp"
                 alt="Logo"
               />
             </a>
@@ -61,7 +61,7 @@ export default function Navbar() {
 
           <div className="navbar-end flex items-center">
             <a href="#contact">
-              <button className="  xl:px-5 xl:py-2 2xl:px-6 2xl:py-3 xl:text-xl 2xl:text-2xl font-roboto bg-[#2B4257] px-4 md:px-5 py-2 md:py-2.5  rounded-lg text-neutral font-medium text-base md:text-xl font-roboto transition-all duration-300 ease-in-out hover:bg-[#861E32]  hover:text-neutral hover:shadow-lg ">
+              <button className="  xl:px-5 xl:py-2 2xl:px-6 2xl:py-3 xl:text-xl 2xl:text-2xl  bg-[#2B4257] px-4 md:px-5 py-2 md:py-2.5  rounded-lg text-neutral font-medium text-base md:text-xl font-montserrat transition-all duration-300 ease-in-out hover:bg-[#861E32]  hover:text-neutral hover:shadow-lg ">
                 Get In Touch
               </button>
             </a>

@@ -9,14 +9,14 @@ import Testimonial from "@/Components/Home/Testimonial";
 import WorkProcess from "@/Components/Home/WorkProcess";
 import Image from "next/image";
 import React from "react";
-
+import { FaArrowTurnUp } from "react-icons/fa6";
 export default function HomePage() {
   return (
     <div className="overflow-hidden">
       <HeroSection />
       <div>
         <Image
-          src="https://i.ibb.co/Xs1PKcg/Line-26.png"
+          src="/Images/Line.webp"
           width="1920"
           height="15"
           alt="line"
@@ -26,7 +26,7 @@ export default function HomePage() {
       <About />
       <div>
         <Image
-          src="https://i.ibb.co/Xs1PKcg/Line-26.png"
+          src="/Images/Line.webp"
           width="1920"
           height="15"
           alt="line"
@@ -36,7 +36,7 @@ export default function HomePage() {
       <Services />
       <div>
         <Image
-          src="https://i.ibb.co/Xs1PKcg/Line-26.png"
+          src="/Images/Line.webp"
           width="1920"
           height="15"
           alt="line"
@@ -47,7 +47,7 @@ export default function HomePage() {
       <Featured />
       <div>
         <Image
-          src="https://i.ibb.co/Xs1PKcg/Line-26.png"
+          src="/Images/Line.webp"
           width="1920"
           height="15"
           alt="line"
@@ -59,7 +59,7 @@ export default function HomePage() {
       <Testimonial />
       <div>
         <Image
-          src="https://i.ibb.co/Xs1PKcg/Line-26.png"
+          src="/Images/Line.webp"
           width="1920"
           height="15"
           alt="line"
@@ -67,6 +67,11 @@ export default function HomePage() {
         />
       </div>
       <Insights />
+      <a href="#home">
+        <div className="fixed text-xl sm:text-2xl md:text-4xl p-2 sm:p-3 md:p-4 bg-white hover:bg-[#201A1E] text-[#201A1E] hover:border-white hover:text-white border border-[#201A1E] cursor-pointer z-10 bottom-5 right-2 rounded-full">
+          <FaArrowTurnUp />
+        </div>
+      </a>
     </div>
   );
 }

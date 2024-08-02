@@ -3,10 +3,10 @@ import AOS from "aos";
 import "aos/dist/aos.css";
 import { useEffect } from "react";
 
-export default function Animation() {
+export default function Animation({ children }) {
   useEffect(() => {
-    AOS.init({ duration: 1000, once: true });
+    AOS.init({ duration: 200, once: true });
   }, []);
 
-  return null; // Render nothing since this component is for initialization only
+  return <>{children}</>;
 }

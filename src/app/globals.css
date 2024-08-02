@@ -2,20 +2,31 @@
 @tailwind components;
 @tailwind utilities;
 /* fonts  */
+/* public/fonts/fonts.css */
+
+@font-face {
+  font-family: "Source Serif Pro";
+  src: url("/public/Fonts/source-serif-pro.regular.otf") format("opentype");
+  font-weight: 400;
+  font-style: normal;
+}
+
+/* Add more font-face rules as needed for other weights and styles */
+
 body {
-  font-family: "Merriweather", serif;
   background-color: #d0b49f;
+  font-family: "Lato", sans-serif !important;
 }
-.font-merriweather {
-  font-family: "Merriweather", serif;
-}
-
-.font-raleway {
-  font-family: "Raleway", sans-serif;
+.font-source-serif-pro {
+  font-family: "Source Serif Pro", serif;
 }
 
-.font-roboto {
-  font-family: "Roboto", sans-serif;
+.font-lato {
+  font-family: "Lato", sans-serif;
+}
+
+.font-montserrat {
+  font-family: "Montserrat", sans-serif;
 }
 
 html {
